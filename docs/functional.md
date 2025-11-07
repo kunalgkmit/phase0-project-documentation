@@ -1,0 +1,96 @@
+# Functional Documentation — ExpenseEase
+
+## Overview
+ExpenseEase enables users to securely log in, record income and expenses, and monitor their financial status in real time.  
+It also includes an admin role with access to basic user statistics, ensuring visibility without compromising individual data privacy.
+
+---
+
+## Core Functionalities
+
+| Feature | Description |
+|----------|-------------|
+| **Signup** | New users register via Clerk authentication. Their details are synced to PostgreSQL. |
+| **Login** | Authenticated access for existing users using Clerk sessions. |
+| **Dashboard Summary** | Shows total income, total expenses, and calculated balance dynamically. |
+| **Create Transaction** | Add income or expense with title, amount, and notes. |
+| **View Transactions** | Display all recent transactions made by the user. |
+| **Update Transactions** | Modify an existing transaction’s details. |
+| **Update Balance** | Balance recalculates automatically after each add/update/delete. |
+| **Delete Transaction** | Remove old or incorrect entries. |
+| **Pull to Refresh** | Refresh dashboard data from backend. |
+| **Charts** | Visualize income and expense distribution over a selected date range. |
+| **Logout** | Securely clear Clerk session and redirect to login. |
+
+---
+
+## Module Division
+
+### 1. Authentication Module
+- Handled entirely through **Clerk**.  
+- Provides user registration, login, and token-based session management.  
+- Syncs user data (name, email, Clerk ID, role) into the `users` table on first login.
+
+### 2. Dashboard Module
+- Fetches summarized financial data (income, expense, balance).  
+- Displays recent transactions and allows pull-to-refresh.
+
+### 3. Transaction Module
+- Handles creation, update, deletion, and listing of transactions.  
+- Updates balance dynamically after every change.
+
+### 4. Chart Module
+- Fetches filtered data from backend (based on date range).  
+- Renders visual charts comparing income and expenses.
+
+### 5. Admin Module
+- Restricted to users with the **admin** role.  
+- Allows viewing total registered users and their names for reporting purposes.
+
+---
+
+## Roles and Authorization
+
+| Role | Access Level | Description |
+|------|---------------|-------------|
+| **User** | Standard | Can perform all personal expense operations (CRUD). |
+| **Admin** | Elevated | Can view total number of users and their names via protected admin endpoints. |
+
+Authorization is enforced using Clerk’s session verification and role-based access checks on the backend.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|--------|-------------|
+| **Frontend** | React Native (Expo) |
+| **Backend** | Node.js with Express |
+| **Database** | PostgreSQL (Neon) |
+| **Authentication** | Clerk (JWT sessions) |
+| **Charts** | React Native Chart Kit |
+| **Documentation** | MkDocs |
+
+---
+
+## Workflow
+
+1. **User Authentication**
+    - User signs up or logs in via Clerk.  
+    - Backend verifies Clerk session and syncs user info into `users` table.  
+
+2. **Dashboard Initialization**
+    - App fetches total income, expense, and recent transactions.  
+
+3. **Transaction Operations**
+    - User can add, edit, or delete transactions.  
+    - Each change updates totals in real time.  
+
+4. **Chart Visualization**
+    - User selects a custom date range to analyze income vs. expense.  
+
+5. **Admin Operations**
+    - Admin views registered users through a secure endpoint.  
+
+6. **Logout**
+    - Session token is cleared; user redirected to login screen.  
