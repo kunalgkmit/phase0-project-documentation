@@ -22,8 +22,12 @@ It provides a comprehensive financial overview — total balance, categorized ch
 
 ---
 
-## Long-Term Vision
-- Add budgeting and category tagging for deeper insights.  
-- Enable export of reports in PDF/CSV formats.  
-- Introduce AI-based spending predictions and financial suggestions.  
-- Maintain open access and transparency as the app scales to community use.
+# Long-Term Vision
+
+- Add budgeting and category tagging for deeper spending insights.  
+- Enable export of reports in PDF and CSV formats.  
+- Integrate AI-powered features to extract transaction details from uploaded bill photos and automatically store them in the database.  
+- Introduce voice input functionality, allowing users to record expenses verbally for automatic entry.  
+- Implement AI-based spending predictions and personalized financial suggestions.  
+- Maintain open access, transparency, and scalability as the app grows to support community use.
+

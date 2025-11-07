@@ -1,18 +1,26 @@
-# ExpenseEase — Personal Expense Tracker
+# ExpenseEase — Expense Tracker App
 
-## Problem Statement
-Most expense tracker apps available today limit essential features such as unlimited transactions behind **in-app purchases** or **subscription models**.  
-This restricts individuals who simply want to manage their finances without paying for basic functionality.
+**ExpenseEase** is a cross-platform mobile application that helps individuals manage their personal finances by tracking income and expenses.  
+It provides an ad-free and fully accessible experience, solving the issue of in-app purchase restrictions present in many other expense tracking apps.
 
-## Solution
-**ExpenseEase** solves this problem by offering a **completely free and transparent expense tracking experience**.  
-It provides every critical feature — from adding income and expenses to viewing analytical charts — without any paywalls or hidden upgrades.  
-Users can focus on tracking and improving their financial habits instead of dealing with pricing tiers or ads.
+# Introduction
 
-## Key Highlights
-- **Free and Transparent:** All features are available without subscriptions or ads.  
-- **Cross-Platform:** Built with React Native & Expo for Android, iOS and Web.  
-- **Secure Authentication:** User login and signup powered by Clerk.  
-- **Smart Dashboard:** Live updates of income, expenses, and balance.  
-- **Charts & Insights:** Visualize spending patterns over custom date ranges.  
-- **Admin Panel:** View total registered users and their basic details.  
+ExpenseEase is a mobile application developed using React Native and Expo with a Node.js and Express backend, connected to a PostgreSQL database hosted on Neon.  
+It enables users to track income and expenses, view total balance, and analyze spending trends through visual charts.
+
+The app includes authentication through Clerk and supports two roles: **User** and **Admin**.  
+Admins can view registered users, while individual users manage their own transactions.
+
+# Scope and Objectives
+
+## Scope
+ExpenseEase provides users with a simple, free, and secure platform to manage daily financial activities.  
+It includes secure login, transaction tracking, dashboard summaries, and analytics without requiring paid upgrades.
+
+## Objectives
+- Allow users to record income and expenses.
+- Display real-time balance and recent transactions.
+- Provide visual charts for income and expense analysis.
+- Enable CRUD operations on financial entries.
+- Support admin access to view registered users.
+- Maintain secure authentication and data handling using Clerk.

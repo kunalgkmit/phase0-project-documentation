@@ -32,4 +32,7 @@ nav:
   - Home: index.md
   - Functional Doc: functional.md
   - Use Case Doc: usecase.md
+  - UI UX: ui_ux.md
+  - External Interfaces: external_interfaces.md
+  - Glossary: glossary.md
   
