@@ -2,7 +2,7 @@
 
 1. **User Authentication**
     - User signs up or logs in via Clerk.  
-    - Backend verifies Clerk session and syncs user info into `users` table.  
+    - Backend verifies Clerk session and syncs the user.  
 
 2. **Dashboard Initialization**
     - App fetches total income, expense, and recent transactions.  
@@ -21,3 +21,7 @@
     - Session token is cleared; user redirected to login screen.  
 
 ---
+
+# Data Flow Diagram (DFD)
+This diagram shows how ExpenseEase handles user and admin workflows — from authentication to CRUD operations and admin access.
+![DFD diagram](assets/dfd.svg)
