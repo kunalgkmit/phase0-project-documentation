@@ -41,11 +41,6 @@ markdown_extensions:
   - admonition
   - md_in_html
 
-plugins:
-  - search
-  - mermaid2:
-      javascript: https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs 
-
 nav:
   - Home: index.md
   - Functional Doc: functional.md
