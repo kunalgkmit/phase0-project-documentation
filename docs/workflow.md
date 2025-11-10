@@ -64,3 +64,45 @@ graph TD
 
 
 ```
+
+---
+
+## Schema Design
+
+```mermaid
+erDiagram
+    users ||--o{ transactions : "has"
+    roles ||--o{ users : "assigned to"
+
+    users {
+        uuid id PK
+        uuid role_id FK "→ roles.id"
+        varchar(100) first_name
+        varchar(100) last_name
+        varchar(255) email
+        timestamp created_at
+        timestamp updated_at
+        timestamp deleted_at
+    }
+
+    roles {
+        uuid id PK
+        varchar(20) name "e.g., 'user', 'admin'"
+        timestamp created_at
+        timestamp updated_at
+        timestamp deleted_at
+    }
+
+    transactions {
+        uuid id PK
+        uuid user_id FK "→ users.id"
+        varchar(20) entry_type "income / expense"
+        varchar(255) title
+        decimal amount
+        date occurred_at
+        timestamp created_at
+        timestamp updated_at
+        timestamp deleted_at 
+    }
+
+```

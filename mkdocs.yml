@@ -11,21 +11,20 @@ theme:
     text: Outfit
     code: Roboto Mono
   palette:
-    # Dark Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: black
-      accent: white
-
-    # Light Mode
+  # Light Mode
     - scheme: default
       toggle:
         icon: material/weather-night
         name: Light mode
       primary: blue
       accent: deep orange
+    # # Dark Mode
+    # - scheme: slate
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: Dark mode
+    #   primary: black
+    #   accent: white
 
 markdown_extensions:
   - attr_list
