@@ -40,6 +40,11 @@ markdown_extensions:
   - pymdownx.snippets
   - admonition
   - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - Home: index.md
@@ -50,3 +55,5 @@ nav:
   - External Interfaces: external_interfaces.md
   - Glossary: glossary.md
   
+extra_javascript:
+  - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
