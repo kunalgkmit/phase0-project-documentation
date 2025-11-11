@@ -43,8 +43,7 @@ G -- User --> I[Redirect to User Dashboard]
 
 H --> J[Admin views number of users]
 I --> K[User views personal dashboard]
-J --> L[End]
-K --> L[End]
+K --> L[User can perform CRUD transactions]
 
 
 ```
@@ -55,17 +54,39 @@ K --> L[End]
 
 ```mermaid
 graph TD
-  User[User] -->|Sign in| Clerk[Clerk Auth Service]
-  Clerk -->|Auth token| Backend[Express Backend]
-  Backend -->|Query role| DB[Postgres Users Table]
-  DB -->|Return role| Backend
-  Backend -->|role=user → dashboard data| User
-  Backend -->|role=admin → admin data| Admin[Admin Panel]
+    %% === AUTHENTICATION FLOW ===
+    U[User] -->|Login / Signup Email, Password| B[Express Backend]
+    B -->|Validate credentials| DB[PostgreSQL]
+    DB -->|Return user record + role| B
+    B -->|Generate JWT Token| U
+
+    %% === USER DASHBOARD FLOW ===
+    U -->|Authenticated request JWT| B
+    B -->|Verify token| Auth[JWT Verification]
+    Auth --> B
+    B -->|Fetch user transactions| DB
+    B -->|Return dashboard data Balance, Income, Expense| U
+
+    %% === USER CRUD OPERATIONS ===
+    U -->|Create / Read / Update / Delete Transactions| B
+    B -->|Perform CRUD on transactions table| DB
+    DB -->|Return updated data| B
+    B -->|Update dashboard summary| U
+
+    %% === ADMIN DASHBOARD FLOW ===
+    A[Admin] -->|Login / Verify JWT| B
+    B -->|Check role = 'admin'| DB
+    DB -->|Confirm admin role| B
+    A -->|View Registered Users & Count| B
+    B -->|Fetch user list + total count| DB
+    DB -->|Return users data| B
+    B -->|Display admin dashboard| A
+
 
 
 ```
 
----
+
 
 ## Schema Design
 
@@ -104,5 +125,25 @@ erDiagram
         timestamp updated_at
         timestamp deleted_at 
     }
+
+```
+
+## Authentication and Authorization flow
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant B as Backend (Express)
+    participant DB as PostgreSQL
+    participant SM as Secrets Manager
+
+    U->>B: POST /login (email, password)
+    B->>DB: Validate user credentials
+    DB-->>B: Return user + role
+    B->>SM: Fetch JWT secret
+    B-->>U: Return JWT (includes user_id, role)
+    U->>B: Access API with JWT
+    B->>SM: Verify token using secret
+    SM-->>B: Token valid
+    B-->>U: Authorized response
 
 ```
