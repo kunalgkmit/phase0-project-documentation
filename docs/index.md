@@ -4,10 +4,10 @@
 It provides an ad-free and fully accessible experience, solving the issue of in-app purchase restrictions present in many other expense tracking apps.
 
 # Introduction
-ExpenseEase is a mobile application developed using React Native and Expo with a Node.js and Express backend, connected to a PostgreSQL database hosted on Neon.  
+ExpenseEase is a mobile application developed using React Native and Expo with a Node.js and Express backend, connected to a PostgreSQL database(AWS RDS).  
 It enables users to track income and expenses, view total balance, and analyze spending trends through visual charts.
 
-The app includes authentication through Clerk and supports two roles: **User** and **Admin**.  
+The app includes authentication through JWT and supports two roles: **User** and **Admin**.  
 Admins can view registered users, while individual users manage their own transactions.
 
 # Scope and Objectives
@@ -21,4 +21,3 @@ It includes secure login, transaction tracking, dashboard summaries, and analyti
 - Provide visual charts for income and expense analysis.
 - Enable CRUD operations on financial entries.
 - Support admin access to view registered users.
-- Maintain secure authentication and data handling using Clerk.

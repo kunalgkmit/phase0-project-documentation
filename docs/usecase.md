@@ -16,8 +16,7 @@ It provides a comprehensive financial overview — total balance, categorized ch
 ## App’s USP / Advantages
 - **Completely Free:** No in-app purchases or hidden tiers.  
 - **Cross-Platform:** One app for both Android, iOS and Web.  
-- **Transparent Role System:** Admins can monitor user without invading privacy.  
-- **Privacy-First:** Clerk manages authentication securely; no manual password handling.  
+- **Transparent Role System:** Admins can monitor user without invading privacy. 
 - **Real-Time Insights:** Automatic recalculation and live charts.  
 
 ---

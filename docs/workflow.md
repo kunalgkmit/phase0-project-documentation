@@ -2,8 +2,8 @@
 
 1. **User Authentication**
 
-   - User signs up or logs in via Clerk.
-   - Backend verifies Clerk session and syncs the user.
+   - User signs up or logs in.
+   - Backend verifies and syncs the user.
 
 2. **Dashboard Initialization**
 
@@ -32,7 +32,7 @@
 ```mermaid
 flowchart TD
 A[Start] --> B[User opens app]
-B --> C[Sign In via Clerk]
+B --> C[Sign In]
 C --> D{Authentication Successful?}
 D -- No --> E[Show Error Message]
 D -- Yes --> F[Fetch User Role from DB]
@@ -52,39 +52,7 @@ K --> L[User can perform CRUD transactions]
 
 ## Data Flow Diagram
 
-```mermaid
-graph TD
-    %% === AUTHENTICATION FLOW ===
-    U[User] -->|Login / Signup Email, Password| B[Express Backend]
-    B -->|Validate credentials| DB[PostgreSQL]
-    DB -->|Return user record + role| B
-    B -->|Generate JWT Token| U
-
-    %% === USER DASHBOARD FLOW ===
-    U -->|Authenticated request JWT| B
-    B -->|Verify token| Auth[JWT Verification]
-    Auth --> B
-    B -->|Fetch user transactions| DB
-    B -->|Return dashboard data Balance, Income, Expense| U
-
-    %% === USER CRUD OPERATIONS ===
-    U -->|Create / Read / Update / Delete Transactions| B
-    B -->|Perform CRUD on transactions table| DB
-    DB -->|Return updated data| B
-    B -->|Update dashboard summary| U
-
-    %% === ADMIN DASHBOARD FLOW ===
-    A[Admin] -->|Login / Verify JWT| B
-    B -->|Check role = 'admin'| DB
-    DB -->|Confirm admin role| B
-    A -->|View Registered Users & Count| B
-    B -->|Fetch user list + total count| DB
-    DB -->|Return users data| B
-    B -->|Display admin dashboard| A
-
-
-
-```
+![AWS Architecture](assets/dfd.png)
 
 
 

@@ -1,11 +1,7 @@
 # External Interfaces
 
-## Authentication Interface
-- **Service:** Clerk  
-- **Purpose:** Handles signup, login, and session validation.
-
 ## Database Interface
-- **Service:** PostgreSQL (Neon)  
+- **Service:** PostgreSQL
 - **Purpose:** Stores user and transaction data.
 
 ## Frontend-Backend API Interface

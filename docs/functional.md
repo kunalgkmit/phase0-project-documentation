@@ -10,8 +10,8 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 
 | Feature | Description |
 |----------|-------------|
-| **Signup** | New users register via Clerk authentication. Their details are synced to PostgreSQL. |
-| **Login** | Authenticated access for existing users using Clerk sessions. |
+| **Signup** | New users register via JWT authentication. Their details are synced to PostgreSQL. |
+| **Login** | Authenticated access for existing users. |
 | **Dashboard Summary** | Shows total income, total expenses, and calculated balance dynamically. |
 | **Create Transaction** | Add income or expense with title, amount, and notes. |
 | **View Transactions** | Display all recent transactions made by the user. |
@@ -20,16 +20,16 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 | **Delete Transaction** | Remove old or incorrect entries. |
 | **Pull to Refresh** | Refresh dashboard data from backend. |
 | **Charts** | Visualize income and expense distribution over a selected date range. |
-| **Logout** | Securely clear Clerk session and redirect to login. |
+| **Logout** | Securely clear session and redirect to login. |
 
 ---
 
 ## Module Division
 
 ### 1. Authentication Module
-- Handled entirely through **Clerk**.  
+- Handled entirely through **JWT**.  
 - Provides user registration, login, and token-based session management.  
-- Syncs user data (name, email, Clerk ID, role) into the `users` table on first login.
+- Syncs user data into the `users` table on first login.
 
 ### 2. Dashboard Module
 - Fetches summarized financial data (income, expense, balance).  
@@ -56,7 +56,7 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 | **User** | Standard | Can perform all personal expense operations (CRUD). |
 | **Admin** | Elevated | Can view total number of users and their names via protected admin endpoints. |
 
-Authorization is enforced using Clerk’s session verification and role-based access checks on the backend.
+Authorization is enforced using JWT session verification and role-based access checks on the backend.
 
 ---
 
@@ -66,7 +66,7 @@ Authorization is enforced using Clerk’s session verification and role-based ac
 |--------|-------------|
 | **Frontend** | React Native (Expo) |
 | **Backend** | Node.js with Express |
-| **Database** | PostgreSQL (Neon) |
-| **Authentication** | Clerk (JWT sessions) |
+| **Database** | PostgreSQL |
+| **Authentication** | JWT |
 | **Charts** | React Native Chart Kit |
 | **Documentation** | MkDocs |
