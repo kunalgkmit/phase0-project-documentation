@@ -1,4 +1,4 @@
-# Technical Documentation — Architecture, DFD, Auth & Tech Stack
+# Technical Documentation — Architecture, DFD, Auth & Authentication and Authorization flow
 
 ## 1. Architecture (AWS-specific)
 
