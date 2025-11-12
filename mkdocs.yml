@@ -54,6 +54,8 @@ nav:
   - UI UX: ui_ux.md
   - External Interfaces: external_interfaces.md
   - Glossary: glossary.md
+  - Testing:
+    - Authentication Module: authentication-test-cases.md
   
 extra_javascript:
   - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js
