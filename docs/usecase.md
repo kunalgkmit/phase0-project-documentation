@@ -2,7 +2,7 @@
 
 ## Primary Use Case
 ExpenseEase enables individuals to record, track, and analyze their income and expenses easily.  
-It provides a comprehensive financial overview — total balance, categorized charts, and transaction history — all without premium restrictions.
+It provides a comprehensive financial overview: total balance, and transaction history — all without premium restrictions.
 
 ---
 
@@ -15,9 +15,9 @@ It provides a comprehensive financial overview — total balance, categorized ch
 
 ## App’s USP / Advantages
 - **Completely Free:** No in-app purchases or hidden tiers.  
-- **Cross-Platform:** One app for both Android, iOS and Web.  
+- **Cross-Platform:** One app for both Android and Web.  
 - **Transparent Role System:** Admins can monitor user without invading privacy. 
-- **Real-Time Insights:** Automatic recalculation and live charts.  
+- **Real-Time Insights:** Automatic recalculation of transaction summaries.  
 
 ---
 

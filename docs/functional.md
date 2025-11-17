@@ -13,13 +13,12 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 | **Signup** | New users register via JWT authentication. Their details are synced to PostgreSQL. |
 | **Login** | Authenticated access for existing users. |
 | **Dashboard Summary** | Shows total income, total expenses, and calculated balance dynamically. |
-| **Create Transaction** | Add income or expense with title, amount, and notes. |
+| **Create Transaction** | Add income or expense with title, amount. |
 | **View Transactions** | Display all recent transactions made by the user. |
 | **Update Transactions** | Modify an existing transaction’s details. |
 | **Update Balance** | Balance recalculates automatically after each add/update/delete. |
 | **Delete Transaction** | Remove old or incorrect entries. |
 | **Pull to Refresh** | Refresh dashboard data from backend. |
-| **Charts** | Visualize income and expense distribution over a selected date range. |
 | **Logout** | Securely clear session and redirect to login. |
 
 ---
@@ -39,11 +38,7 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 - Handles creation, update, deletion, and listing of transactions.  
 - Updates balance dynamically after every change.
 
-### 4. Chart Module
-- Fetches filtered data from backend (based on date range).  
-- Renders visual charts comparing income and expenses.
-
-### 5. Admin Module
+### 4. Admin Module
 - Restricted to users with the **admin** role.  
 - Allows viewing total registered users and their names for reporting purposes.
 
@@ -54,7 +49,7 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 | Role | Access Level | Description |
 |------|---------------|-------------|
 | **User** | Standard | Can perform all personal expense operations (CRUD). |
-| **Admin** | Elevated | Can view total number of users and their names via protected admin endpoints. |
+| **Admin** | Elevated | Can view total number of users and their names. |
 
 Authorization is enforced using JWT session verification and role-based access checks on the backend.
 
@@ -64,9 +59,9 @@ Authorization is enforced using JWT session verification and role-based access c
 
 | Layer | Technology |
 |--------|-------------|
-| **Frontend** | React Native (Expo) |
+| **Frontend** | Flutter |
+| **Mobile** | Flutter |
 | **Backend** | Node.js with Express |
 | **Database** | PostgreSQL |
 | **Authentication** | JWT |
-| **Charts** | React Native Chart Kit |
 | **Documentation** | MkDocs |

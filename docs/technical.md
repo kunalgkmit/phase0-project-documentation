@@ -41,7 +41,6 @@ erDiagram
     transactions {
         uuid id PK
         uuid user_id FK "→ users.id"
-        varchar(20) entry_type "income / expense"
         varchar(255) title
         decimal amount
         date occurred_at
@@ -65,7 +64,7 @@ sequenceDiagram
     DB-->>B: Return user + role
     B->>SM: Fetch JWT secret
     B-->>U: Return JWT (includes user_id, role)
-    U->>B: Access API with JWT
+    U->>B: Access API
     B->>SM: Verify token using secret
     SM-->>B: Token valid
     B-->>U: Authorized response
