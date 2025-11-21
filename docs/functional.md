@@ -12,7 +12,7 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 |----------|-------------|
 | **Signup** | New users register via JWT authentication. Their details are synced to PostgreSQL. |
 | **Login** | Authenticated access for existing users. |
-| **Dashboard Summary** | Shows total income, total expenses, and calculated balance dynamically. |
+| **Dashboard Summary** | Shows total income, total expenses, and calculates balance dynamically. |
 | **Create Transaction** | Add income or expense with title, amount. |
 | **View Transactions** | Display all recent transactions made by the user. |
 | **Update Transactions** | Modify an existing transaction’s details. |
@@ -49,7 +49,7 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 | Role | Access Level | Description |
 |------|---------------|-------------|
 | **User** | Standard | Can perform all personal expense operations (CRUD). |
-| **Admin** | Elevated | Can view total number of users and their names. |
+| **Admin** | Elevated | Can view total number of users and their names and their email. |
 
 Authorization is enforced using JWT session verification and role-based access checks on the backend.
 

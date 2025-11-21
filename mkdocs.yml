@@ -51,11 +51,9 @@ nav:
   - Workflow: workflow.md
   - Technical Doc: technical.md
   - Use Case Doc: usecase.md
-  - UI UX: ui_ux.md
-  - External Interfaces: external_interfaces.md
-  - Glossary: glossary.md
   - Testing:
     - Testing Module: test-cases.md
+  - UI UX: ui_ux.md
   
 extra_javascript:
   - https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js

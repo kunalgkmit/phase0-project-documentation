@@ -2,7 +2,7 @@
 
 ## 1. Architecture (AWS-specific)
 
-![AWS Architecture](assets/ExpenseEase.png)
+![AWS Architecture](assets/ExpenseEase (1).png)
 
 ---
 

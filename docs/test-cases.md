@@ -9,7 +9,7 @@
 | REG-01 | Valid Registration | 1. Enter valid name, email, password<br>2. Submit                         | User registered successfully            |
 | REG-02 | Duplicate Email    | 1. Enter an already registered email<br>2. Submit                         | Error: "User already exists"            |
 | REG-03 | Invalid Email      | 1. Enter invalid email format<br>2. Submit                                | Validation error                        |
-| REG-04 | Weak Password      | 1. Enter short/weak password<br>2. Submit                                 | Validation error                        |
+| REG-04 | Weak Password      | 1. Enter short password<br>2. Submit                                 | Validation error                        |
 | REG-05 | Empty Fields       | 1. Leave name/email/password empty<br>2. Submit                           | Field validation errors                 |
 
 ---

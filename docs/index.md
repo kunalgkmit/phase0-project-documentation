@@ -13,10 +13,10 @@ Admins can view registered users, while individual users manage their own transa
 # Scope and Objectives
 ## Scope
 ExpenseEase provides users with a simple, free, and secure platform to manage daily financial activities.  
-It includes secure login, transaction tracking, dashboard summaries, and analytics.
+It includes secure login, transaction tracking, dashboard summaries, and analytics for admin.
 
 ## Objectives
 - Allow users to record income and expenses.
 - Display real-time balance and recent transactions.
 - Enable CRUD operations on financial entries.
-- Support admin access to view registered users.
+- Support admin access to view registered users count, their names and emails.

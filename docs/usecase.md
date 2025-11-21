@@ -29,4 +29,5 @@ It provides a comprehensive financial overview: total balance, and transaction h
 - Introduce voice input functionality, allowing users to record expenses verbally for automatic entry.  
 - Implement AI-based spending predictions and personalized financial suggestions.  
 - Maintain open access, transparency, and scalability as the app grows to support community use.
+- Integrate UPI apps with Expense Ease for transaction integration.
 
