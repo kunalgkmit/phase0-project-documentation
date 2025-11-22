@@ -19,7 +19,7 @@ It also includes an admin role with access to basic user statistics, ensuring vi
 | **Update Balance** | Balance recalculates automatically after each add/update/delete. |
 | **Delete Transaction** | Remove old or incorrect entries. |
 | **Pull to Refresh** | Refresh dashboard data from backend. |
-| **Logout** | Securely clear session and redirect to login. |
+| **Logout** | Redirect to login. |
 
 ---
 
