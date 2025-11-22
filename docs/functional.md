@@ -61,7 +61,10 @@ Authorization is enforced using JWT session verification and role-based access c
 |--------|-------------|
 | **Frontend** | Flutter |
 | **Mobile** | Flutter |
-| **Backend** | Node.js with Express |
-| **Database** | PostgreSQL |
+| **Backend** | Node.js, Express |
+| **Database** | AWS RDS(PostgreSQL) |
+| **CI/CD** | Github Actions |
+| **Backend Deployment** | AWS EC2 |
+| **Frontend Deployment** | Firebase |
 | **Authentication** | JWT |
 | **Documentation** | MkDocs |
