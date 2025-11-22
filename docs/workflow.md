@@ -19,7 +19,7 @@
       - Admin views the count of registered users , their names and email.
 
 5. **Logout**
-      - Session token is cleared; user redirected to login screen.
+      - User redirected to login screen.
 
 ---
 
