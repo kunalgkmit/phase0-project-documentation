@@ -63,7 +63,7 @@ sequenceDiagram
     B->>DB: Validate user credentials
     DB-->>B: Return user + role
     B->>SM: Fetch JWT secret
-    B-->>U: Return JWT (includes user_id, role)
+    B-->>U: Return JWT
     U->>B: Access API
     B->>SM: Verify token using secret
     SM-->>B: Token valid
