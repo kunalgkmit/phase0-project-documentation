@@ -50,6 +50,7 @@ nav:
   - Functional Doc: functional.md
   - Workflow: workflow.md
   - Technical Doc: technical.md
+  - CI/CD Pipeline and Deployment Flow: deploy.md
   - Use Case Doc: usecase.md
   - Testing:
     - Testing Module: test-cases.md
